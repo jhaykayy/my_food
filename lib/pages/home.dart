@@ -191,7 +191,7 @@ class _HomeState extends State<Home> {
                         SizedBox(width: 20),
                         Column(
                           children: [
-                            Container(
+                            SizedBox(
                               width: MediaQuery.of(context).size.width / 2,
                               child: Text(
                                 "Mediterian Chickenpea Salad",
@@ -201,7 +201,7 @@ class _HomeState extends State<Home> {
 
                             SizedBox(height: 5),
 
-                            Container(
+                            SizedBox(
                               width: MediaQuery.of(context).size.width / 2,
                               child: Text(
                                 "Honey goot cheese",
@@ -211,8 +211,8 @@ class _HomeState extends State<Home> {
 
                             SizedBox(height: 5),
 
-                            Container(
-                              width: MediaQuery.of(context).size.width / 2,
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width / 3,
                               child: Text(
                                 "\$25",
                                 style: AppWidget.semiBoldTextFieldStyle(),
