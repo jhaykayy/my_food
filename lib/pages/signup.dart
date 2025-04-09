@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:my_food/pages/signup.dart';
+import 'package:my_food/pages/login.dart';
 import 'package:my_food/widget/widget_support.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LoginState extends State<Login> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,12 +51,12 @@ class _LoginState extends State<Login> {
                   Center(
                     child: Image.asset(
                       "images/logo.png",
-                      width: MediaQuery.of(context).size.width / 1.5,
+                      width: MediaQuery.of(context).size.width / 1.2,
                       fit: BoxFit.cover,
                     ),
                   ),
 
-                  SizedBox(height: 50),
+                  SizedBox(height: 40),
 
                   Material(
                     borderRadius: BorderRadius.circular(20),
@@ -73,9 +73,19 @@ class _LoginState extends State<Login> {
                         children: [
                           SizedBox(height: 30),
                           Text(
-                            "Login",
+                            "Sign up",
                             style: AppWidget.headlineTextFieldStyle(),
                           ),
+
+                          TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Name',
+                              hintStyle: AppWidget.semiBoldTextFieldStyle(),
+                              prefixIcon: Icon(Icons.person_2_outlined),
+                            ),
+                          ),
+
+                          SizedBox(height: 30),
 
                           TextField(
                             decoration: InputDecoration(
@@ -96,16 +106,6 @@ class _LoginState extends State<Login> {
                             ),
                           ),
 
-                          SizedBox(height: 20),
-
-                          Container(
-                            alignment: Alignment.topRight,
-                            child: Text(
-                              "Forget Password?",
-                              style: AppWidget.semiBoldTextFieldStyle(),
-                            ),
-                          ),
-
                           SizedBox(height: 80),
 
                           Material(
@@ -120,7 +120,7 @@ class _LoginState extends State<Login> {
                               ),
                               child: Center(
                                 child: Text(
-                                  "LOGIN",
+                                  "SIGN UP",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
@@ -142,11 +142,11 @@ class _LoginState extends State<Login> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignUp()),
+                        MaterialPageRoute(builder: (context) => Login()),
                       );
                     },
                     child: Text(
-                      "Dont have an account? Sign up",
+                      "Already have an account? Login",
                       style: AppWidget.semiBoldTextFieldStyle(),
                     ),
                   ),

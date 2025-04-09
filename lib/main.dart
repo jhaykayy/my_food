@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_food/pages/bottomnav.dart';
 import 'package:my_food/pages/home.dart';
 import 'package:my_food/pages/login.dart';
+import 'package:my_food/pages/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Login(),
+      home: SignUp(),
     );
   }
 }
